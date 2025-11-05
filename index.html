@@ -1,13 +1,16 @@
  <html>
     <head><Title>Thornreach Map</Title>
     <link rel="stylesheet" type="text/css" href="index.css">
-    </head>
+    <script src="script.js" defer></script>
+</head>
     <body>
     <header class="siteHeader">Thornreach Atlas</header>
 <main class='layout drawer-closed'>
-    <aside class="sidebarLeft"> Tools/Legends</aside>
+    <aside class="sidebarLeft is-closed" arira-hidden="true" aria-labelledby="tools"> Tools/Legends</aside>
+       <h2 id="tools">Tools</h2>
     <section class="mapArea" role = "region" aria-label="World Map"></section>
-    <!-- Map image and markers go here -->
+    <button id="openPanel" class="openButton" type="button" aria-expanded="false" aria-controls="InfoTitle">
+        openPanel </button>
     <aside class="sidebarRight is-closed" aria-hidden="true" aria-labelledby="infoTitle">
         <h2 id="infoTitle">Location Info</h2>
         <button class="panelClose" type = "button" aria-label="Close Panel">x</button>
@@ -18,3 +21,38 @@
 <footer class="siteFooter"> © Thornreach developed by Aftershock 06 | 2025</footer>
 </body>
 </html> 
+
+<script>
+(function () {
+  const selectors = '.sidebarLeft, .mapArea, .sidebarRight';
+
+  function upsertLabel(el){
+    let label = el.querySelector('.boxDebugOverlay');
+    if(!label){
+      label = document.createElement('div');
+      label.className = 'boxDebugOverlay';
+      el.appendChild(label);
+    }
+    const r = el.getBoundingClientRect();
+    label.textContent = `${Math.round(r.width)} × ${Math.round(r.height)} px`;
+  }
+
+  function updateAll(){
+    document.querySelectorAll(selectors).forEach(upsertLabel);
+  }
+
+  // Initial + responsive updates
+  window.addEventListener('load', updateAll, { once:true });
+  window.addEventListener('resize', updateAll);
+  window.addEventListener('orientationchange', updateAll);
+
+  // Optional: press "D" to toggle overlays on/off while testing
+  document.addEventListener('keydown', (e)=>{
+    if(e.key.toLowerCase() === 'd'){
+      document.querySelectorAll('.boxDebugOverlay').forEach(n=>{
+        n.style.display = (n.style.display === 'none' ? '' : 'none');
+      });
+    }
+  });
+})();
+</script>
