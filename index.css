@@ -92,7 +92,7 @@
 /* Respect reduced motion users */
 @media (prefers-reduced-motion: reduce) {
     .sidebarRight { transition: none; }
-    .sidebarLedt {transtion:none;)
+    .sidebarLeft {transition:none; }
   }
 
 @media (max-width: 900px) {
