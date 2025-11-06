@@ -238,7 +238,11 @@ body, html{
 }
 
 /* Arrow animation (flip direction) */
-.drawerTab svg{ transition: transform 200ms ease; }
+.drawerTab svg{ 
+    width: 48px !important;
+    height: 48px !important;
+    stroke-width: 3 !important;
+    transition: transform 200ms ease; }
 
 /* When panel is OPEN, arrow should point LEFT (to indicate closing) */
 .sidebarLeft:not(.is-closed) .drawerTab svg{ transform: rotate(180deg); }
