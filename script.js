@@ -35,3 +35,20 @@ document.addEventListener('DOMContentLoaded', () => {
   // Setup left panel (assuming similar selectors with 'Left' suffix)
   setupPanel('.sidebarLeft', '#openPanelLeft', '.panelCloseLeft');
 });
+
+// Add alongside your existing right-panel setup
+document.addEventListener('DOMContentLoaded', () => {
+  const leftPanel = document.querySelector('.sidebarLeft');
+  const leftBtn   = document.querySelector('#openPanelLeft');
+
+  if (leftPanel && leftBtn) {
+    const toggleLeft = () => {
+      const willOpen = leftPanel.classList.contains('is-closed');
+      leftPanel.classList.toggle('is-closed');
+      leftPanel.setAttribute('aria-hidden', String(!willOpen));
+      leftBtn.setAttribute('aria-expanded', String(willOpen));
+    };
+
+    leftBtn.addEventListener('click', toggleLeft);
+  }
+});
