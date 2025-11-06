@@ -197,13 +197,13 @@ body, html{
   z-index: 5; white-space: nowrap;
 }
 
-:root { --tab-w: 36px; }
+:root { --tab-w: 64px; }
 
 /* The little tab that lives on the panel's top-right edge */
 .drawerTab{
   position: absolute;
   top: 8px;
-  right: calc(1 * var(--tab-w)); /* sits just outside the panel edge */
+  right: calc(-1 * var(--tab-w)); /* sits just outside the panel edge */
   width: 64PX; height: 64px;
   display: grid; place-items: center;
 background: #ff0 !important; /* bright yellow for test */
