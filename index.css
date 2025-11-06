@@ -1,7 +1,7 @@
 :root{
-    --left-w: 280px;
-    --right-w: 360px;
-    --gap: 12px;
+    --left-w: 200px;
+    --right-w: 200px;
+    --gap: 6px;
   }
 
 *{ outline: 1px solid limegreen !important;}
