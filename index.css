@@ -44,7 +44,7 @@ body, html{
 .sidebarLeft {
   position: absolute;
   top: var(--gap);
-  left: var(--gap);
+  left: var(--gap); right: auto;
   bottom: var(--gap);
   width: var(--left-w);
   background: #111;
