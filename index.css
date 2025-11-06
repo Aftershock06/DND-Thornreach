@@ -197,7 +197,7 @@ body, html{
   z-index: 5; white-space: nowrap;
 }
 
-:root { --tab-w: 24px; }
+:root { --tab-w: 36px; }
 
 /* The little tab that lives on the panel's top-right edge */
 .drawerTab{
