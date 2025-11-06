@@ -65,7 +65,7 @@
     box-shadow: -8px 0 16px rgba(0,0,0,.45);
     transition: transform 220ms ease;
     transform: translateX(0);           /* open position */
-    z-index: 20;                        /* sit above the map */
+    z-index: 22;                        /* sit above the map */
   }
 
 .sidebarLeft.is-closed{
