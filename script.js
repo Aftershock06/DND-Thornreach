@@ -1,14 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Generic function to handle sidebar panel behavior
+  // ONLY do right panel setup with .panelCloseRight
   function setupPanel(panelSelector, openBtnSelector, closeBtnSelector) {
     const panel = document.querySelector(panelSelector);
     const openBtn = document.querySelector(openBtnSelector);
     const closeBtn = document.querySelector(closeBtnSelector);
 
-    console.log('[boot]', { panel, openBtn, closeBtn });
-
     if (!panel || !openBtn || !closeBtn) {
-      console.error(`Selector not found for ${panelSelector}. Check class/id names.`);
+      // Only log error for right, so left still works via drawerTab!
+      if (panelSelector === '.sidebarRight') {
+        console.error(`Selector not found for ${panelSelector}. Check class/id names.`);
+      }
       return;
     }
 
@@ -29,18 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
     closeBtn.addEventListener('click', closePanel);
   }
 
-  // Setup right panel
+  // ONLY call setupPanel for the right panel
   setupPanel('.sidebarRight', '#openPanelRight', '.panelCloseRight');
 
-  // Setup left panel (assuming similar selectors with 'Left' suffix)
-  setupPanel('.sidebarLeft', '#openPanelLeft', '.panelCloseLeft');
-});
-
-// Add alongside your existing right-panel setup
-document.addEventListener('DOMContentLoaded', () => {
+  // For the left panel, use the drawerTab for toggle
   const leftPanel = document.querySelector('.sidebarLeft');
   const leftBtn   = document.querySelector('#openPanelLeft');
-
   if (leftPanel && leftBtn) {
     leftBtn.addEventListener('click', () => {
       const willOpen = leftPanel.classList.contains('is-closed');
@@ -49,5 +44,4 @@ document.addEventListener('DOMContentLoaded', () => {
       leftBtn.setAttribute('aria-expanded', String(willOpen));
     });
   }
-});
 });
