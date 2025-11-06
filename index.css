@@ -5,6 +5,7 @@
   }
 
 body, html{
+    max-width: 965px;
     overflow-x: clip;
 }
 
