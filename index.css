@@ -26,9 +26,9 @@
 }
   
 /* Place children in the 3 columns */
-.sidebarLeft   { grid-column: 1; }
+/*.sidebarLeft   { grid-column: 1; }*/
 .mapArea       { grid-column: 2; }
-.sidebarRight  { grid-column: 3; }
+/*.sidebarRight  { grid-column: 3; }*/
 
 .mapArea {
     position: relative;
@@ -43,7 +43,7 @@
 .sidebarLeft{
     position: absolute;  /* take it out of the grid flow */
     top: var(--gap);
-    right: var(--gap);
+    left: var(--gap);
     bottom: var(--gap);
     width: var(--right-w);
     background: #111;
@@ -51,7 +51,7 @@
     border-radius: 10px;
     padding: 12px 16px 16px;
     overflow: auto;
-    box-shadow: -8px 0 16px rgba(0,0,0,.45);
+    box-shadow: 8px 0 16px rgba(0,0,0,.45);
     transition: transform 220ms ease;
     transform: translateX(0);           /* open position */
     z-index: 20;                        /* sit above the map */
@@ -105,7 +105,23 @@
     .sidebarRight {
       grid-column: 1;                  /* stack them */
     }
-  
+  /* Convert right panel to overlay on mobile */
+  .sidebarLeft {
+    position: fixed;
+    top: 56px;             /* below header */
+    left: 0;
+    bottom: 0;
+    width: min(92vw, 420px);
+    max-width: 100%;
+    border-top-right-radius: 14px;
+    border-bottom-right-radius: 0;
+    z-index: 40;
+    box-shadow: 12px 0 24px rgba(0,0,0,.45);
+  }
+  .sidebarLeft.is-closed {
+    transform: translateX(-100%); /* slide completely off-screen */
+  }
+
     /* Convert right panel to overlay on mobile */
     .sidebarRight {
       position: fixed;
@@ -161,7 +177,7 @@
 }
 
 /* Make sure the target boxes can host an absolute overlay */
-.sidebarLeft, .mapArea, .sidebarRight { position: relative; }
+.mapArea { position: relative; }
 
 /* Centered size label */
 .boxDebugOverlay{
