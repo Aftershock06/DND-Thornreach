@@ -4,6 +4,10 @@
     --gap: 6px;
   }
 
+body, html{
+    overflow-x: hidden;
+}
+
 *{ outline: 1px solid limegreen !important;}
 
   * { box-sizing: border-box; }
