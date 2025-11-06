@@ -42,13 +42,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const leftBtn   = document.querySelector('#openPanelLeft');
 
   if (leftPanel && leftBtn) {
-    const toggleLeft = () => {
+    leftBtn.addEventListener('click', () => {
       const willOpen = leftPanel.classList.contains('is-closed');
       leftPanel.classList.toggle('is-closed');
       leftPanel.setAttribute('aria-hidden', String(!willOpen));
       leftBtn.setAttribute('aria-expanded', String(willOpen));
-    };
-
-    leftBtn.addEventListener('click', toggleLeft);
+    });
   }
+});
 });
