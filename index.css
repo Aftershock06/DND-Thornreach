@@ -76,12 +76,19 @@
     transform: translateX(100%);        /* slide off to the right */
   }
 
-.panelClose {
+.panelCloseRight {
     position: absolute; top: 8px; right: 8px;
     background: transparent; border: 0; color: #bbb;
     font-size: 20px; line-height: 1; cursor: pointer;
   }
-.panelClose:focus { outline: 2px solid #6cf; border-radius: 6px; }
+.panelCloseRight:focus { outline: 2px solid #6cf; border-radius: 6px; }
+
+.panelCloseLeft {
+    position: absolute; top: 8px; right: 8px;
+    background: transparent; border: 0; color: #bbb;
+    font-size: 20px; line-height: 1; cursor: pointer;
+  }
+.panelCloseLeft:focus { outline: 2px solid #6cf; border-radius: 6px; }
   
 /* Respect reduced motion users */
 @media (prefers-reduced-motion: reduce) {
