@@ -39,7 +39,7 @@
     top: var(--gap);
     left: var(--gap);
     bottom: var(--gap);
-    width: var(--right-w);
+    width: var(--left-w);
     background: #111;
     color: #eee;
     border-radius: 10px;
