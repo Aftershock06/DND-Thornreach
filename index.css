@@ -17,6 +17,7 @@
     grid-template-columns: 1fr;
     gap: var(--gap);
     min-height: calc(100vh - 96px);
+    max-width: 968px;
     padding: var(--gap);
     position: relative; /* so we can absolutely-position the drawer inside */
   }
