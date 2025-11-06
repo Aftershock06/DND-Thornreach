@@ -10,7 +10,7 @@ body, html{
     overflow-x: clip;
 }
 
-*{ outline: 1px solid limegreen !important;}
+*{ outline: 1px solid orange !important;}
 
   * { box-sizing: border-box; }
   html, body { height: 100%; margin: 0; }
