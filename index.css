@@ -77,7 +77,7 @@
   }
 
 .panelCloseRight {
-    position: absolute; top: 8px; right: 80px;
+    position: absolute; top: 8px; right: 8px;
     background: transparent; border: 0; color: #bbb;
     font-size: 20px; line-height: 1; cursor: pointer;
   }
