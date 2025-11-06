@@ -230,7 +230,8 @@ body, html{
   right: calc(-1 * var(--tab-w));           /* sits just outside the panel edge */
   width: var(--tab-w); height: 32px;
   display: grid; place-items: center;
-  background: #2a2a2a; color: #eee;
+background: #ff0 !important; /* bright yellow for test */
+color: #eee;
   border: 1px solid #444; border-left: none;
   border-top-right-radius: 8px; border-bottom-right-radius: 8px;
   box-shadow: 6px 0 12px rgba(0,0,0,.35);
