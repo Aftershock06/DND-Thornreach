@@ -228,7 +228,7 @@ body, html{
   position: absolute;
   top: 8px;
   right: calc(-1 * var(--tab-w));           /* sits just outside the panel edge */
-  width: var(--tab-w); height: 32px;
+  width: 64PX; height: 64px;
   display: grid; place-items: center;
 background: #ff0 !important; /* bright yellow for test */
 color: #eee;
