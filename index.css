@@ -240,3 +240,10 @@
     box-shadow: 12px 0 24px rgba(0,0,0,.45);
   }
 }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
