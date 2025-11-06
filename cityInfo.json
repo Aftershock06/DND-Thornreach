@@ -1,0 +1,12 @@
+{
+  "new-haven": {
+    "title": "New Haven",
+    "html": "<p>Walled market town with cobblestone streets and a lively marketplace.</p><ul><li>Inn: The Silver Tinker</li><li>Blacksmith: The Anvil & Ember</li></ul>",
+    "link": { "href": "#/maps/new-haven", "label": "Open town map" }
+  },
+  "blackthorn-ruins": {
+    "title": "Blackthorn Ruins",
+    "html": "<p>Ancient amphitheater crumbling above the cliffs. Locals avoid it after dark.</p>",
+    "link": { "href": "#/maps/blackthorn", "label": "View ruin layout" }
+  }
+}
