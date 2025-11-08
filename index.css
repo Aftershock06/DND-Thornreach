@@ -3,244 +3,92 @@
     --right-w: 200px;
     --gap: 6px;
   }
-
-body, html{
-    height: 100%;
-    max-width: 965px;
-    margin: 0; auto; 
+  
+  body, html{
+    width: 100%;
+    margin: 0;
+    padding: 0;
     overflow-x: clip;
-}
-
-*{ outline: 1px solid orange !important;}
-
-  * { box-sizing: border-box; }
-  html, body { height: 100%; margin: 0; }
-  body { font-family: system-ui, sans-serif; }
+  }
   
-.siteHeader, .siteFooter { padding: 8px 12px; background: #111; color: #eee; }
-  
-.layout {
+  .siteHeader, .siteFooter {
+    padding: 8px 12px;
+    background: orange;
+    color: #eee;
+  }
+  .layout{
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--gap);
     min-height: calc(100vh - 96px);
     max-width: 968px;
     padding: var(--gap);
-    position: relative; /* so we can absolutely-position the drawer inside */
+    position: relative;
   }
   
-
-.mapArea {
+  .mapArea{
     position: relative;
-    z-index: 0;       /* base layer */
-    background: #222;
-    /* fill the content area beneath header/footer + padding */
+    z-index: 0; /* BaseLayer */
+    background: rgb(182, 182, 182);
     min-height: calc(100dvh - 96px - var(--gap)*2);
     height: 100%;
-    border-radius: 10px;
     overflow: hidden;
   }
-
-.sidebarLeft {
-  position: absolute;
-  top: var(--gap);
-  left: var(--gap); right: auto;
-  bottom: var(--gap);
-  width: var(--left-w);
-  background: #111;
-  color: #eee;
-  border-radius: 10px;
-  padding: 12px 16px 16px;
-  overflow: auto;
-  box-shadow: 8px 0 16px rgba(0,0,0,.45);
-  transition: transform 220ms ease;
-  transform: translateX(0);
-  z-index: 20;
-}
-.sidebarRight {
-  position: absolute;
-  top: var(--gap);
-  right: var(--gap);
-  bottom: var(--gap);
-  width: var(--right-w);
-  background: #111;
-  color: #eee;
-  border-radius: 10px;
-  padding: 12px 16px 16px;
-  overflow: auto;
-  box-shadow: -8px 0 16px rgba(0,0,0,.45);
-  transition: transform 220ms ease;
-  transform: translateX(0);
-  z-index: 22;
-}
-
-.sidebarLeft.is-closed{
-    transform:translateX(-100%); /*slide off to the left */
-}
-
-.sidebarRight.is-closed {
-    transform: translateX(100%);        /* slide off to the right */
-  }
-
-.panelCloseRight {
-    position: absolute; top: 8px; right: 8px;
-    background: transparent; border: 0; color: #bbb;
-    font-size: 20px; line-height: 1; cursor: pointer;
-  }
-.panelCloseRight:focus { outline: 2px solid #6cf; border-radius: 6px; }
-
-.panelCloseLeft {
-    position: absolute; top: 8px; right: 8px;
-    background: transparent; border: 0; color: #bbb;
-    font-size: 20px; line-height: 1; cursor: pointer;
-  }
-.panelCloseLeft:focus { outline: 2px solid #6cf; border-radius: 6px; }
   
-/* Respect reduced motion users */
-@media (prefers-reduced-motion: reduce) {
-    .sidebarRight { transition: none; }
-    .sidebarLeft {transition:none; }
-  }
-
-@media (max-width: 900px) {
-    .layout {
-      grid-template-columns: 1fr;     /* single column */
-      gap: var(--gap);
-    }
-    .sidebarLeft,
-    .mapArea,
-    .sidebarRight {
-      grid-column: 1;                  /* stack them */
-    }
-  /* Convert right panel to overlay on mobile */
-  .sidebarLeft {
-    position: fixed;
-    top: 56px;             /* below header */
-    left: 0;
-    bottom: 0;
-    width: min(92vw, 420px);
-    max-width: 100%;
-    border-top-right-radius: 14px;
-    border-bottom-right-radius: 0;
-    z-index: 40;
-    box-shadow: 12px 0 24px rgba(0,0,0,.45);
-  }
-  .sidebarLeft.is-closed {
-    transform: translateX(-100%); /* slide completely off-screen */
-  }
-
-    /* Convert right panel to overlay on mobile */
-    .sidebarRight {
-      position: fixed;
-      top: 56px;             /* below header */
-      right: 0;
-      bottom: 0;
-      width: min(92vw, 420px);
-      max-width: 100%;
-      border-top-left-radius: 14px;
-      border-bottom-left-radius: 0;
-      z-index: 40;
-      box-shadow: -12px 0 24px rgba(0,0,0,.45);
-    }
-    .sidebarRight.is-closed {
-      transform: translateX(100%); /* slide completely off-screen */
-    }
-  
-    /* Give the map some height in the stack */
-    .mapArea { min-height: 55vh; }
+  .sidebarRight{
+    position:absolute;
+    top:var(--gap);
+    right:var(--gap);
+    bottom:var(--gap);
+    width: var(--right-w);
+    background: #111;
+    color: #eee;
+    border-radius: 10px;
+    padding: 12px 16px 12px;
+    overflow: auto;
+    box-shadow: -8px 0 16px rgba(0,0,0,.45);
+    transition: transform 220ms ease;
+    transform: translateX(0);
+    z-index: 22;
   }
   
-/* Pretty scrollbars where supported */
-.sidebarLeft, .sidebarRight {
-    scrollbar-gutter: stable;
-  }
-  .sidebarLeft::-webkit-scrollbar,
-  .sidebarRight::-webkit-scrollbar { width: 10px; }
-  .sidebarLeft::-webkit-scrollbar-thumb,
-  .sidebarRight::-webkit-scrollbar-thumb {
-    background: #333; border-radius: 6px;
+  .sidebarRight.is-closed{
+    transform: translateX(100%); /* Slide off the Screen*/
   }
   
-  /* Focus outlines (keyboard users) */
-  :focus-visible {
-    outline: 2px solid #6cf; outline-offset: 2px;
+  .panelCloseRight {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: transparent;
+    border: 0;
+    color: #bbb;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
   }
-
-.openButton{
-  position:absolute;
-  top: 16px;
-  right: 16px;
-  padding: 8px 12px;
-  background: #2a2a2a;
-  color: #eee;
-  border: 1px solid #444;
-  border-radius:6px;
-  cursor: pointer;
-  z-index: 5;
-}
-
-.openButton:hover{
-  background: #333;
-}
-
-/* Make sure the target boxes can host an absolute overlay */
-.mapArea { position: relative; }
-
-/* Centered size label */
-.boxDebugOverlay{
-  position: absolute; left:50%; top:50%;
-  transform: translate(-50%, -50%);
-  padding: 4px 8px; border-radius: 999px;
-  font: 12px/1 system-ui, sans-serif;
-  color: #fff; background: rgba(0,0,0,.45);
-  letter-spacing: .3px; pointer-events: none; /* don’t block clicks */
-  z-index: 5; white-space: nowrap;
-}
-
-:root { --tab-w: 36px; }
-
-/* The little tab that lives on the panel's top-right edge */
-.drawerTab{
-  position: absolute;
-  top: 8px;
-  right: calc(-1 * var(--tab-w)); /* sits just outside the panel edge */
-  width: 64px; height: 64px;
-  display: grid; place-items: center;
-background: #ff0 !important; /* bright yellow for test */
-color: #eee;
-  border: 1px solid #444; border-left: none;
-  border-top-right-radius: 8px; border-bottom-right-radius: 8px;
-  box-shadow: 6px 0 12px rgba(0,0,0,.35);
-  cursor: pointer;
-    overflow: visible;
-}
-
-/* Arrow animation (flip direction) */
-.drawerTab svg{ 
-    width: 48px !important;
-    height: 48px !important;
-    stroke-width: 3 !important;
-    transition: transform 200ms ease; }
-
-/* When panel is OPEN, arrow should point LEFT (to indicate closing) */
-.sidebarLeft:not(.is-closed) .drawerTab svg{ transform: rotate(180deg); }
-
-/* When panel is CLOSED, arrow points RIGHT (indicating 'open me') */
-.sidebarLeft.is-closed .drawerTab svg{ transform: rotate(0deg); }
-
-/* Mobile: fixed overlay; same peek behavior works */
-@media (max-width: 900px){
-  .sidebarLeft{
-    position: fixed; top:56px; left:0; bottom:0;
-    width: min(92vw, 420px); max-width: 100%;
-    border-top-right-radius: 14px; border-bottom-right-radius: 0;
-    box-shadow: 12px 0 24px rgba(0,0,0,.45);
+  
+  .panelCloseRight:focus{
+    outline: 2px solid #6cf;
+    border-radius: 6px;
   }
-}
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
+  
+  .area-button {
+    position: absolute;
+    /* Remove default link styling */
+    text-decoration: none;
+    color: white;
+    background-color: transparent; /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    /* align-items: center;
+    text-align: center; */
+    cursor: pointer;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding/border are included in the width/height */
+    
+  }
+  
+  .area-button:hover {
+    background-color: transparent;
+  }
