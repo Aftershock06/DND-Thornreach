@@ -24,6 +24,7 @@
     max-width: 968px;
     padding: var(--gap);
     position: relative;
+    overflow: hidden;
   }
   
   .mapArea{
