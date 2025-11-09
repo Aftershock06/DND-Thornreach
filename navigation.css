@@ -3,6 +3,9 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
 
+:root{
+    --sidebar-w:250px;
+}
 .fa-2x{
     font-size: 3em;
 }
@@ -79,13 +82,21 @@
     width:190px;
       font-family: 'Titillium Web', sans-serif;
     }
-    
+
 .main-menu>ul.logout {
 position:absolute;
 left:0;
 bottom:0;
 }
 
+.main-menu .logo{
+    transform: translateX(0);
+    translate: transform 0.3s ease;
+}
+
+.main-menu.expanded .logo{
+    transform:translate(var(--sidebar-w)/2);
+}
 .no-touch .scrollable.hover {
 overflow-y:hidden;
 }
