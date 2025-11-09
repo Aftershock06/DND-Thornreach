@@ -148,3 +148,7 @@ nav ul,nav li {
     height:100px;
     font-size: 30px;
 }
+
+.main-menu:hover .logo{
+    transform: translateX(95px);
+}
