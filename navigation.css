@@ -170,6 +170,6 @@ nav.main-menu li.active>a,
   }
   
   /* Keep it centered even when sidebar expands */
-  .main-menu.expanded .logo {
-    transform: none;
+  .main-menu:hover .logo {
+    transform: translateX(95px);
   }
