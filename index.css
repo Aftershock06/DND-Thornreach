@@ -16,6 +16,7 @@
     background: orange;
     color: #eee;
   }
+
   .layout{
     display: grid;
     grid-template-columns: 1fr;
@@ -27,69 +28,4 @@
     overflow: hidden;
   }
   
-  .mapArea{
-    position: relative;
-    z-index: 0; /* BaseLayer */
-    background: rgb(182, 182, 182);
-    min-height: calc(100dvh - 96px - var(--gap)*2);
-    height: 100%;
-    overflow: hidden;
-  }
   
-  .sidebarRight{
-    position:absolute;
-    top:var(--gap);
-    right:var(--gap);
-    bottom:var(--gap);
-    width: var(--right-w);
-    background: #111;
-    color: #eee;
-    border-radius: 10px;
-    padding: 12px 16px 12px;
-    overflow: auto;
-    box-shadow: -8px 0 16px rgba(0,0,0,.45);
-    transition: transform 220ms ease;
-    transform: translateX(0);
-    z-index: 22;
-  }
-  
-  .sidebarRight.is-closed{
-    transform: translateX(100%); /* Slide off the Screen*/
-  }
-  
-  .panelCloseRight {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    background: transparent;
-    border: 0;
-    color: #bbb;
-    font-size: 20px;
-    line-height: 1;
-    cursor: pointer;
-  }
-  
-  .panelCloseRight:focus{
-    outline: 2px solid #6cf;
-    border-radius: 6px;
-  }
-  
-  .area-button {
-    position: absolute;
-    /* Remove default link styling */
-    text-decoration: none;
-    color: white;
-    background-color: transparent; /* Semi-transparent background */
-    display: flex;
-    justify-content: center;
-    /* align-items: center;
-    text-align: center; */
-    cursor: pointer;
-    border-radius: 5px;
-    box-sizing: border-box; /* Ensures padding/border are included in the width/height */
-    
-  }
-  
-  .area-button:hover {
-    background-color: transparent;
-  }
