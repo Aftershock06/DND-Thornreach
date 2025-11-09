@@ -51,7 +51,8 @@
     width: 250px;
 }
 
-.main-menu li>a{
+.main-menu li>a,
+.main-menu .logobox{
     position:relative;
     display:table;
     border-collapse: collapse;
@@ -124,7 +125,16 @@ nav ul,nav li {
     padding:0;
     }
 
-.main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+.main-menu li:hover>a,
+.main-menu .logo,
+nav.main-menu li.active>a,
+.dropdown-menu>li>a:hover,
+.dropdown-menu>li>a:focus,
+.dropdown-menu>.active>a,
+.dropdown-menu>.active>a:hover,
+.dropdown-menu>.active>a:focus,
+.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,
+.dashboard-page nav.dashboard-menu ul li.active a {
     color:#fff;
     background-color:#000000;
     }
