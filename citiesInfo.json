@@ -8,10 +8,15 @@
     "title": "Blackthorn Ruins",
     "html": "<p>Ancient amphitheater crumbling above the cliffs. Locals avoid it after dark.</p>",
     "link": { "href": "#/maps/blackthorn", "label": "View ruin layout" }
-  }
+  },
   "pebble-bay": {
     "title": "Pebble Bay",
     "html": "<p>Beautiful inlet bay with sandy shores on the south side of the island. Pebble Bay is the end of the river that connects to Lake Flourn</P>",
     "link": {"href": "#/maps/pebblebay", "label": "View Pebble Bay"}
-  }
+  },
+  "lake-florn":{
+    "title": "Lake Florn", 
+    "html": "<p>At the base of the Blackthorn Mountains, surrounded by dark forest on the east and west, Lake Florn is the center of Thornreach. It home to many magical creatures.</p>",
+    "link": "", 
+  },
 }
