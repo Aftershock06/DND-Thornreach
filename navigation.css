@@ -95,7 +95,7 @@ bottom:0;
 }
 
 .main-menu.expanded .logo{
-    transform:translate(var(--sidebar-w)/2);
+    transform:translate(95px);
 }
 .no-touch .scrollable.hover {
 overflow-y:hidden;
@@ -147,5 +147,4 @@ nav ul,nav li {
     padding-top:20px;
     height:100px;
     font-size: 30px;
-    
 }
