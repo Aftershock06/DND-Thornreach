@@ -159,6 +159,22 @@ nav.main-menu li.active>a,
     font-size: 30px;
 }
 
-.main-menu:hover .logo{
-    transform: translateX(95px);
-}
+.logobox {
+    padding-top: 0;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo {
+    color: #999; /* gray color like the icons */
+    font-size: 48px;
+    transition: all 0.3s ease;
+    transform: translateX(0);
+  }
+  
+  /* Keep it centered even when sidebar expands */
+  .main-menu.expanded .logo {
+    transform: none;
+  }
