@@ -152,11 +152,6 @@ nav.main-menu li.active>a,
     src: local('Titillium WebLight'), local('TitilliumWeb-Light'), url(http://themes.googleusercontent.com/static/fonts/titilliumweb/v2/anMUvcNT0H1YN4FII8wpr24bNCNEoFTpS2BTjF6FB5E.woff) format('woff');
 }
     
-.logobox{
-    padding-top:20px;
-    height:100px;
-    font-size: 30px;
-}
 
 .logobox {
     padding-top: 0;
@@ -164,6 +159,7 @@ nav.main-menu li.active>a,
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #212121;
   }
   
   .logo {
