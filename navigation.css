@@ -97,7 +97,7 @@ bottom:0;
 
 .main-menu.expanded .logo{
     transform:translate(95px);
-    font-size:60px;
+    font-size:12px;
 }
 .no-touch .scrollable.hover {
 overflow-y:hidden;
@@ -173,5 +173,4 @@ nav.main-menu li.active>a,
   /* Keep it centered even when sidebar expands */
   .main-menu:hover .logo {
     transform: translateX(95px);
-    font-size: 60px;
   }
