@@ -97,6 +97,7 @@ bottom:0;
 
 .main-menu.expanded .logo{
     transform:translate(95px);
+    font-size:60px;
 }
 .no-touch .scrollable.hover {
 overflow-y:hidden;
