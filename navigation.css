@@ -164,7 +164,7 @@ nav.main-menu li.active>a,
   
   .logo {
     color: #999; /* gray color like the icons */
-    font-size: 60px;
+    font-size: 30px;
     transition: all 0.3s ease;
     transform: translateX(0);
   }
@@ -172,4 +172,5 @@ nav.main-menu li.active>a,
   /* Keep it centered even when sidebar expands */
   .main-menu:hover .logo {
     transform: translateX(95px);
+    font-size: 60px;
   }
