@@ -97,6 +97,7 @@ bottom:0;
 
 .main-menu.expanded .logo{
     transform:translate(95px);
+    font-size:12px;
 }
 .no-touch .scrollable.hover {
 overflow-y:hidden;
@@ -164,7 +165,7 @@ nav.main-menu li.active>a,
   
   .logo {
     color: #999; /* gray color like the icons */
-    font-size: 60px;
+    font-size: 30px;
     transition: all 0.3s ease;
     transform: translateX(0);
   }
