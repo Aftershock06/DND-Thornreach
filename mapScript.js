@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', ()=>{
+    const POI_DATA = window.POI_DATA || {};
+
     function setupPanel(panelSelector, openBtnSelector, closeBtnSelector){
       const panel   = document.querySelector(panelSelector);
       const openBtn = document.querySelector(openBtnSelector);
@@ -37,15 +39,29 @@ document.addEventListener('DOMContentLoaded', ()=>{
       document.querySelectorAll('.area-button').forEach(a => {
         a.addEventListener('click', (e) => {
           e.preventDefault();               // don’t jump to the hash
-          right.openPanel();                // slide it in
-          // (optional) set the title from id or href
-          const id = a.id?.replace('btn-','') || a.getAttribute('href')?.slice(1);
+          
+          const key = a.dataset.poi;
+          const poi = POI_DATA[key];
+          console.log('Clicked POI', key, poi)
+
+          right.openPanel();  
+
           const h2 = right.panel.querySelector('#infoTitle');
-          if (h2 && id) h2.textContent = id.replace(/([A-Z])/g, ' $1').trim();
-          // (optional) focus the panel for a11y
-          right.panel.focus?.();
+          const body = right.panel.querySelector('.panelBody')
+          if (!body) {
+          console.warn("No .panelBody element found inside .sidebarRight");
+          return;
+          }
+
+          if (poi) {
+            if (h2) h2.textContent = poi.title;
+            body.innerHTML = poi.html;
+          } else {
+            if (h2) h2.textContent = "Location Info";
+            body.innerHTML = '<p> No details available yet.</p>';
+          }
         });
       });
     }
-  })
+  });
   

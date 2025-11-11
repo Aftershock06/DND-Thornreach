@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="navigation.css">
     <link rel="stylesheet" href="mapPage.css">
-     <script src="script.js"></script>
+    <script src="mapScript.js"></script>
+    <script src="cities.js"></script>
     <title>Thornreach | World Map</title>
    
 </head>
@@ -18,7 +19,7 @@
    <div class="navigation">
     <nav class="main-menu">
       <div class="logobox">
-        <i class="fa fa-puzzle-piece logo" aria-hidden="true"></i>
+        <i class="fa fa-globe logo" aria-hidden="true"></i>
       </div>
       <ul>
         <li>
@@ -33,6 +34,12 @@
             <span class="nav-text">Characters</span>
           </a>
         </li>
+        <li>
+            <a href="quest.html">
+              <i class="fa fa-road fa-2x" ></i>
+              <span class="nav-text">Quest</span>
+            </a>
+          </li>
       </ul>
 
     </nav>
@@ -40,14 +47,30 @@
   <main>
     <section class="mapArea" role="region" aria-label="worldMap">
       <img src="ThornreachWorldMap.png" usemap="#image-map">
-      <a href="#newHaven" class="area-button" id="btn-newHaven" style="top: 160px; left: 228px; width: 142px; height: 137px;"></a>
-      <a href="#lakeFlourn" class="area-button" id="btn-lakeFourn" style="top: 392px; left: 558px; width: 165px; height: 61px;"></a>
-      <a href="#pebbleGate" class="area-button" id="btn-pebbleGate" style="top: 614px; left: 303px; width: 189px; height: 139px;"></a>
+      <a  href="#newHaven" 
+          data-poi='newHaven' 
+          class="area-button" 
+          id="btn-newHaven" 
+          style="top: 160px; left: 228px; width: 142px; height: 137px;"></a>
+
+      <a  href="#lakeFlorn" 
+          data-poi="lakeFlorn"
+          class="area-button" 
+          id="btn-lakeForn" 
+          style="top: 392px; left: 558px; width: 165px; height: 61px;"></a>
+
+      <a  href="#pebbleGate"
+          data-poi="pebbleGate"
+          class="area-button" 
+          id="btn-pebbleGate" 
+          style="top: 614px; left: 303px; width: 189px; height: 139px;"></a>
     </section>
+    
     <!-- Right Side Bar-->
     <aside class="sidebarRight is-closed" aria-hidden="true" aria-labelledby="infoTitle">
       <h2 id="infoTitle"> Location Info</h2>
       <button class="panelCloseRight panelClose" type="button" aria-label="Close Panel">X</button>
+      <div class = "panelBody"><p>test</p></div>
     </aside>
   </main>
 
