@@ -4,8 +4,9 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust 200px as needed */
     /* Or for a fixed 3-column layout: grid-template-columns: repeat(3, 1fr); */
-    gap: 10px; /* Optional: adds spacing between items */
+    gap: 5px; /* Optional: adds spacing between items */
     justify-content: center;
+
   }
   
 
@@ -35,7 +36,6 @@
 
 .playerImg {
     width:100%;
-    height: auto;
     border-radius: 5px;
     margin-bottom: 15px;
 }
@@ -55,7 +55,9 @@
 .playerBio{
     font-style: italic
 }
-
+img{
+    width: 200px;
+}
 img:invalid {
     display: none; 
 }

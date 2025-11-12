@@ -25,5 +25,6 @@ window.playerData = {
         job : "Town Nusance",
         bio : "<p> Nobody like Wade.</p>",
         family : "N/A",
+        image: "imgs/wade.jpg"
     },
 }
