@@ -1,0 +1,61 @@
+
+
+.cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust 200px as needed */
+    /* Or for a fixed 3-column layout: grid-template-columns: repeat(3, 1fr); */
+    gap: 10px; /* Optional: adds spacing between items */
+    justify-content: center;
+  }
+  
+
+.playerCard{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0, 0.1);
+    width:300px;
+    padding: 20px;
+    text-align: center;
+    transition: transorm 0.2s;
+}
+
+.playerCardBG{
+    background-color: rgb(239, 127, 117);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0, 0.1);
+    width:200px;
+    padding: 20px;
+    text-align: center;
+    transition: transorm 0.2s;
+}
+
+.playerCard:hover {
+    transform: translateY(-5px);
+}
+
+.playerImg {
+    width:100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.playerName {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+.playerCity, .playerJob, .playerFamily {
+    font-size: 0.9em;
+    color: #555;
+    margin: 0;
+}
+
+.playerBio{
+    font-style: italic
+}
+
+img:invalid {
+    display: none; 
+}
