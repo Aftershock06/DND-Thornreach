@@ -54,3 +54,16 @@
   border-radius: 10px 10px 0px 0px;
 
 }
+
+.main{
+  margin-left: 75px;
+  text-align: left;
+  justify-align: center;
+}
+
+.footerWrapper{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  margin-left: 105px;
+}
