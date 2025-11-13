@@ -65,5 +65,5 @@
   position: fixed;
   bottom: 0;
   left: 0;
-  margin-left: 105px;
+  transform:translateX(-50%);
 }
