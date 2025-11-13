@@ -12,11 +12,11 @@
     font-family: 'Titillium Web', sans-serif;
   }
   
-  .siteHeader, .siteFooter {
+  /*.siteHeader, .siteFooter {
     padding: 8px 12px;
     background: #3f3f3f;
     color: #eee;
-  }
+  }*/
 
   .layout{
     display: grid;
@@ -30,3 +30,27 @@
   }
   
 
+
+.headerWrapper, .footerWrapper {
+  width: 65%;          /* Takes up the middle 60% */
+  margin: 0 auto;      /* Centers the 60% wrapper */
+  padding: 20px 0;     /* Optional top/bottom space */
+  display: flex;
+  justify-content: center;  /* Centers the box inside */
+}
+
+/* The centered box itself */
+.headerBox, .footerBox {
+  background: #333;
+  color: #fff;
+  padding: 12px 30px;
+  border-radius: 0 0 10px 10px;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+.footerBox{
+  font-size: .3em;
+  border-radius: 10px 10px 0px 0px;
+
+}

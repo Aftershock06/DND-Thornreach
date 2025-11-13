@@ -9,46 +9,14 @@
     <link rel="stylesheet" href="mapPage.css">
     <script src="mapScript.js"></script>
     <script src="cities.js"></script>
+    <script src="index.js"></script>
     <title>Thornreach | World Map</title>
    
 </head>
 <body>
-  <header class="siteHeader">
-    ----  Thornreach Atlas  ---- 
+  <header class="siteHeader" id="siteHeader" data-page-title="World of Thornreach">
    </header> 
-   <div class="navigation">
-    <nav class="main-menu">
-      <div class="logobox">
-        <i class="fa fa-globe logo" aria-hidden="true"></i>
-      </div>
-      <ul>
-        <li>
-          <a href="index.html">
-            <i class="fa fa-home fa-2x"></i>
-            <span class="nav-text">World Map</span>
-          </a>
-        </li>
-        <li>
-          <a href="characters.html">
-            <i class="fa fa-users fa-2x" ></i>
-            <span class="nav-text">Characters</span>
-          </a>
-        </li>
-        <li>
-            <a href="quest.html">
-              <i class="fa fa-road fa-2x" ></i>
-              <span class="nav-text">Quest</span>
-            </a>
-          </li>
-          <li>
-            <a href="journal.html">
-              <i class="fa fa-book fa-2x" ></i>
-              <span class="nav-text">Journal</span>
-            </a>
-          </li>
-      </ul>
-
-    </nav>
+   <div class="navigation" id="navigation">
    </div>
   <main>
     <section class="mapArea" role="region" aria-label="worldMap">
@@ -82,8 +50,7 @@
   </main>
 
 
-  <footer class="siteFooter">
-    © Thornreach developed by Aftershock | 2025
+  <footer class="siteFooter" id ="siteFooter">
   </footer>
 </body>
 </html>
