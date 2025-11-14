@@ -23,7 +23,7 @@ window.playerData = {
         name : "Wade Lorner",
         home : "New Haven",
         job : "Town Nusance",
-        bio : "<p> Nobody like Wade.</p>",
+        bio : "<p> Nobody likes Wade.</p>",
         family : "N/A",
         image: "imgs/wade.jpg"
     },

@@ -12,35 +12,41 @@
     font-family: 'Titillium Web', sans-serif;
   }
   
-  /*.siteHeader, .siteFooter {
-    padding: 8px 12px;
-    background: #3f3f3f;
-    color: #eee;
-  }*/
-
   .layout{
     display: grid;
     grid-template-columns: 1fr;
     gap: var(--gap);
-    min-height: calc(100vh - 96px);
+    min-height: calc(100vh - 80px);
     max-width: 968px;
     padding: var(--gap);
     position: relative;
     overflow: hidden;
   }
-  
 
-
+.headerWrapper {
+  top: 0;
+  left: 0;
+}
 .headerWrapper, .footerWrapper {
   width: 65%;          /* Takes up the middle 60% */
   margin: 0 auto;      /* Centers the 60% wrapper */
-  padding: 20px 0;     /* Optional top/bottom space */
   display: flex;
+  position: fixed;
   justify-content: center;  /* Centers the box inside */
+  margin-left: 50%;
+  transform:translateX(-50%);
+  z-index: 400;
 }
 
+.footerWrapper{
+  bottom: 0;
+  left: 0;
+}
+
+
+
 /* The centered box itself */
-.headerBox, .footerBox {
+.headerBox {
   background: #333;
   color: #fff;
   padding: 12px 30px;
@@ -49,21 +55,30 @@
   font-size: 1.6rem;
 }
 
-.footerBox{
-  font-size: .3em;
+
+
+.footerBox {
+  background: #333;
+  color: #fff;
+  padding: 12px 30px;
+  text-align: center;
+  font-size: .5em;
   border-radius: 10px 10px 0px 0px;
 
 }
 
+
 .main{
-  margin-left: 75px;
+  margin-left: 60px;
   text-align: left;
-  justify-align: center;
+  justify-content: center;
+  z-index:1;
 }
 
 .footerWrapper{
   position: fixed;
   bottom: 0;
   left: 0;
+  margin-left: 50%;
   transform:translateX(-50%);
 }

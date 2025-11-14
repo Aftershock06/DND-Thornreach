@@ -6,7 +6,8 @@
     /* Or for a fixed 3-column layout: grid-template-columns: repeat(3, 1fr); */
     gap: 5px; /* Optional: adds spacing between items */
     justify-content: center;
-
+    padding-top: 20px;
+    padding-left: 10px;
   }
   
 
@@ -14,7 +15,7 @@
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0,0,0, 0.1);
-    width:300px;
+    width:350px;
     padding: 20px;
     text-align: center;
     transition: transorm 0.2s;
@@ -53,7 +54,8 @@
 }
 
 .playerBio{
-    font-style: italic
+    font-style: italic;
+    font-size: .75em;
 }
 img{
     width: 200px;
