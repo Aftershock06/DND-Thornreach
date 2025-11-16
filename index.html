@@ -54,3 +54,37 @@
 </html>
 
 
+<script>
+  (function () {
+    const selectors = '.sidebarLeft, .mapArea, .sidebarRight';
+  
+    function upsertLabel(el){
+      let label = el.querySelector('.boxDebugOverlay');
+      if(!label){
+        label = document.createElement('div');
+        label.className = 'boxDebugOverlay';
+        el.appendChild(label);
+      }
+      const r = el.getBoundingClientRect();
+      label.textContent = `${Math.round(r.width)} × ${Math.round(r.height)} px`;
+    }
+  
+    function updateAll(){
+      document.querySelectorAll(selectors).forEach(upsertLabel);
+    }
+  
+    // Initial + responsive updates
+    window.addEventListener('load', updateAll, { once:true });
+    window.addEventListener('resize', updateAll);
+    window.addEventListener('orientationchange', updateAll);
+  
+    // Optional: press "D" to toggle overlays on/off while testing
+    document.addEventListener('keydown', (e)=>{
+      if(e.key.toLowerCase() === 'd'){
+        document.querySelectorAll('.boxDebugOverlay').forEach(n=>{
+          n.style.display = (n.style.display === 'none' ? '' : 'none');
+        });
+      }
+    });
+  })();
+  </script>

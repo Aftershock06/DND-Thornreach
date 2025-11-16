@@ -6,7 +6,7 @@
     height: 100%;
     overflow: hidden;
   }
-  
+
   .sidebarRight{
     position:absolute;
     top:var(--gap);
@@ -64,3 +64,5 @@
   .area-button:hover {
     background-color: transparent;
   }
+
+  

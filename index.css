@@ -82,3 +82,14 @@
   margin-left: 50%;
   transform:translateX(-50%);
 }
+
+/* Centered size label */
+.boxDebugOverlay{
+  position: absolute; left:50%; top:50%;
+  transform: translate(-50%, -50%);
+  padding: 4px 8px; border-radius: 999px;
+  font: 12px/1 system-ui, sans-serif;
+  color: #fff; background: rgba(0,0,0,.45);
+  letter-spacing: .3px; pointer-events: none; /* don’t block clicks */
+  z-index: 5; white-space: nowrap;
+}
